@@ -1,3 +1,9 @@
+'use strict'
+
+/**
+ * Define dummy data
+ */
+
 const dummyData = [
     {
         id: "a",
@@ -94,6 +100,10 @@ const dummyData = [
             }
         ]
     }
-];
+]
 
-export default dummyData;
+/**
+ * Export dummy data
+ */
+
+module.exports = dummyData
