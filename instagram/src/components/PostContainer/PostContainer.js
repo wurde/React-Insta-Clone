@@ -18,7 +18,15 @@ require('./PostContainer.scss')
 function PostContainer(props) {
   return (
     <div className="jsx-PostContainer">
-      {props.posts.map(post => <Post key={post.id} post={post} /> )}
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <section class="jsx-PostContainer__section">
+              {props.posts.map(post => <Post key={post.id} post={post} /> )}
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

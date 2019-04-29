@@ -28,9 +28,9 @@ function SearchBar() {
             <input type="text" name="q" placeholder="Search" className="jsx-SearchBar__input"></input>
           </div>
           <div className="col-3 d-flex align-items-center">
-            <i className="far fa-compass fa-2x"></i>
-            <i className="far fa-heart fa-2x"></i>
-            <i className="far fa-user fa-2x"></i>
+            <i className="far fa-compass fa-2x jsx-SearchBar__explore"></i>
+            <i className="far fa-heart fa-2x jsx-SearchBar__activity"></i>
+            <i className="far fa-user fa-2x jsx-SearchBar__profile"></i>
           </div>
         </div>
       </div>
