@@ -20,8 +20,8 @@ function PostContainer(props) {
   return (
     <div className="jsx-PostContainer">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
+        <div className="row justify-content-center">
+          <div className="col-8">
             <section className="jsx-PostContainer__section">
               {props.posts.map(post => <Post key={post.id} post={post} /> )}
             </section>

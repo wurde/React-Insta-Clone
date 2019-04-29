@@ -18,10 +18,41 @@ require('./Post.scss')
 
 function Post(props) {
   return (
-    <div className="jsx-Post">
-      {JSON.stringify(props.post)}
-      <CommentSection comments={props.post.comments} />
-    </div>
+    <article className="jsx-Post">
+      <header className="jsx-Post__header">
+        <div className="row">
+          <div className="col-12 d-flex align-items-center">
+            <img src={props.post.thumbnailUrl} width="40px" className="jsx-Post__thumbnail" />
+            <span className="jsx-Post__username">{props.post.username}</span>
+          </div>
+        </div>
+      </header>
+
+      <div className="row">
+        <div className="col-12">
+          <img src={props.post.imageUrl} width="100%" />
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-12">
+          <section className="jsx-Post__actionbar">
+            <i className="far fa-heart fa-2x jsx-Post__action"></i>
+            <i className="far fa-comment fa-2x fa-flip-horizontal jsx-Post__action"></i>
+          </section>
+
+          <section className="jsx-Post__likes">
+            <p>{props.post.likes} likes</p>
+          </section>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-12">
+          <CommentSection comments={props.post.comments} />
+        </div>
+      </div>
+    </article>
   )
 }
 
