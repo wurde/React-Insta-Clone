@@ -19,7 +19,7 @@ function PostContainer(props) {
   return (
     <div className="jsx-PostContainer">
       {JSON.stringify(props.data)}
-      {props.data.comments.map(comment => <CommentSection key={comment.id} comment={comment} />)}
+      <CommentSection comments={props.data.comments} />
     </div>
   )
 }

@@ -3,6 +3,8 @@
  */
 
 const React = require('react')
+const Comment = require('./Comment')
+const CommentForm = require('./CommentForm')
 
 /**
  * Import component styles
@@ -17,8 +19,8 @@ require('./CommentSection.scss')
 function CommentSection(props) {
   return (
     <div className="jsx-CommentSection">
-      {props.comment.username}<br/>
-      {props.comment.text}
+      {props.comments.map(comment => <Comment key={comment.id} comment={comment} />)}
+      <CommentForm />
     </div>
   )
 }
