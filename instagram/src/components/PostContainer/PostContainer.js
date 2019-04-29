@@ -3,7 +3,7 @@
  */
 
 const React = require('react')
-const CommentSection = require('../CommentSection/CommentSection')
+const Post = require('./Post')
 
 /**
  * Import component styles
@@ -18,8 +18,7 @@ require('./PostContainer.scss')
 function PostContainer(props) {
   return (
     <div className="jsx-PostContainer">
-      {JSON.stringify(props.data)}
-      <CommentSection comments={props.data.comments} />
+      {props.posts.map(post => <Post key={post.id} post={post} /> )}
     </div>
   )
 }

@@ -21,7 +21,7 @@ function App() {
     <div className="jsx-App">
       <h1>Instagram</h1>
       <components.SearchBar />
-      {initial_data.map(data => <components.PostContainer key={data.id} data={data} /> )}
+      <components.PostContainer posts={initial_data} />
     </div>
   )
 }
