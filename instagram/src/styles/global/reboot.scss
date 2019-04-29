@@ -104,6 +104,10 @@ h6, .h6 { font-size: $h6-font-size; }
  * Other global styles
  */
 
+strong {
+  font-weight: 500;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

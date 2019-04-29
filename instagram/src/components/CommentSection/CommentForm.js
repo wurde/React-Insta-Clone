@@ -16,12 +16,12 @@ require('./CommentForm.scss')
 
 function CommentForm(props) {
   return (
-    <div className="jsx-CommentForm">
-      <form>
-        <input type="text" name="comment" placeholder="Add comment"></input>
-        <button type="submit">Submit</button>
+    <section className="jsx-CommentForm">
+      <form className="d-flex justify-content-between">
+        <input type="text" name="comment" placeholder="Add a comment..."></input>
+        <button type="submit">Post</button>
       </form>
-    </div>
+    </section>
   )
 }
 

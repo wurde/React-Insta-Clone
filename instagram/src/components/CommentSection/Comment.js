@@ -19,8 +19,7 @@ require('./Comment.scss')
 function Comment(props) {
   return (
     <div className="jsx-Comment">
-      {props.comment.username}<br/>
-      {props.comment.text}
+      <strong>{props.comment.username}</strong> {props.comment.text}<br/>
     </div>
   )
 }
@@ -31,7 +30,6 @@ function Comment(props) {
 
 Comment.propTypes = {
   comment: PropTypes.shape({
-    id: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   })
