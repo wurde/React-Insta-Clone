@@ -16,22 +16,25 @@ require('./SearchBar.scss')
 
 function SearchBar() {
   return (
-    <div className="jsx-SearchBar">
-      <div className="row">
-        <div className="col-3">
-          <i className="fab fa-instagram fa-2x"></i> |
-          <h2>Instagram</h2>
-        </div>
-        <div className="col-6">
-          <i className="fas fa-search fa-2x"></i> Search
-        </div>
-        <div className="col-3">
-          <i className="far fa-compass fa-2x"></i>
-          <i className="far fa-heart fa-2x"></i>
-          <i className="far fa-user fa-2x"></i>
+    <header className="jsx-SearchBar">
+      <div className="container">
+        <div className="row jsx-SearchBar--padding">
+          <div className="col-3 d-flex align-items-center">
+            <i className="fab fa-instagram fa-2x"></i>
+            <div className="jsx-SearchBar__spacer"></div>
+            <h3>Instagram</h3>
+          </div>
+          <div className="col-6 d-flex align-items-center justify-content-center">
+            <input type="text" name="q" placeholder="Search" className="jsx-SearchBar__input"></input>
+          </div>
+          <div className="col-3 d-flex align-items-center">
+            <i className="far fa-compass fa-2x"></i>
+            <i className="far fa-heart fa-2x"></i>
+            <i className="far fa-user fa-2x"></i>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 
