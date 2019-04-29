@@ -19,7 +19,6 @@ require('./App.scss')
 function App() {
   return (
     <div className="jsx-App">
-      <h1>Instagram</h1>
       <components.SearchBar />
       <components.PostContainer posts={initial_data} />
     </div>
