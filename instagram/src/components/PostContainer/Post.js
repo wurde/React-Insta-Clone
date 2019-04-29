@@ -3,6 +3,7 @@
  */
 
 const React = require('react')
+const PropTypes = require('prop-types')
 const CommentSection = require('../CommentSection/CommentSection')
 
 /**
