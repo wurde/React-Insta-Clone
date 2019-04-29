@@ -22,7 +22,7 @@ function PostContainer(props) {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <section class="jsx-PostContainer__section">
+            <section className="jsx-PostContainer__section">
               {props.posts.map(post => <Post key={post.id} post={post} /> )}
             </section>
           </div>
@@ -30,6 +30,14 @@ function PostContainer(props) {
       </div>
     </div>
   )
+}
+
+/**
+ * Validate prop types
+ */
+
+PostContainer.propTypes = {
+  posts: PropTypes.array.isRequired
 }
 
 /**

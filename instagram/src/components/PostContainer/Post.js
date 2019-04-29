@@ -26,6 +26,22 @@ function Post(props) {
 }
 
 /**
+ * Validate prop types
+ */
+
+Post.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    comments: PropTypes.array.isRequired,
+  })
+}
+
+/**
  * Export component
  */
 

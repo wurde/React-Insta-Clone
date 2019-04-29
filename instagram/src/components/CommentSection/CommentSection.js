@@ -27,6 +27,14 @@ function CommentSection(props) {
 }
 
 /**
+ * Validate prop types
+ */
+
+CommentSection.propTypes = {
+  comments: PropTypes.array.isRequired
+}
+
+/**
  * Export component
  */
 

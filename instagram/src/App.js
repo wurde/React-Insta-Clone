@@ -5,7 +5,6 @@
 const React = require('react')
 const components = require('./components/index')
 const initial_data = require('./initial_data')
-const PropTypes = require('prop-types')
 
 /**
  * Import component styles
