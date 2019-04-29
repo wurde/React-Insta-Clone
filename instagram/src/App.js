@@ -4,6 +4,7 @@
 
 const React = require('react')
 const components = require('./components/index')
+const initial_data = require('./initial_data')
 
 /**
  * Import component styles
