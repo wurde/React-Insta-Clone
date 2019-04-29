@@ -14,10 +14,11 @@ require('./CommentSection.scss')
  * Define component
  */
 
-function CommentSection() {
+function CommentSection(props) {
   return (
     <div className="jsx-CommentSection">
-      CommentSection
+      {props.comment.username}<br/>
+      {props.comment.text}
     </div>
   )
 }

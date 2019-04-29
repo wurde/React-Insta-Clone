@@ -18,10 +18,10 @@ require('./App.scss')
 
 function App() {
   return (
-    <div className="App">
+    <div className="jsx-App">
       <h1>Instagram</h1>
       <components.SearchBar />
-      <components.PostContainer />
+      {initial_data.map(data => <components.PostContainer key={data.id} data={data} /> )}
     </div>
   )
 }
