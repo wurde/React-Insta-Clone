@@ -23,7 +23,7 @@ function CommentSection(props) {
     <div className="jsx-CommentSection">
       {props.comments.map(comment => <Comment key={comment.id} comment={comment} />)}
       <div className="jsx-CommentSection__timestamp">
-        <time>{moment(props.postedAt).format('YYYY')}</time>
+        <time>{moment(props.postedAt, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</time>
       </div>
       <CommentForm />
     </div>
