@@ -37,3 +37,23 @@
     margin-left: 15px;
   }
 }
+
+.jsx-SearchBar input {
+  border: none;
+  height: 30px;
+  outline: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.jsx-SearchBar input:focus {
+  border: 1px solid #acd4fa;
+}
+
+.jsx-SearchBar button {
+  background-color: inherit;
+  border: inherit;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+}

@@ -32,10 +32,20 @@ class App extends Component {
     this.setState({ posts: initial_data })
   }
 
+  filterPosts = event => {
+    event.preventDefault()
+
+    let query = event.target.elements[0].value
+
+    this.setState({
+      posts: this.state.posts.filter(post => post.username === query)
+    })
+  }
+
   render() {
     return (
       <div className="jsx-App">
-        <components.SearchBar />
+        <components.SearchBar filterPosts={this.filterPosts} />
         <components.PostContainer posts={this.state.posts} current_user={this.state.current_user} />
       </div>
     )
