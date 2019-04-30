@@ -28,7 +28,6 @@ class Post extends Component {
   }
 
   addNewLike = () => {
-    console.log("addNewLike")
     this.setState({ likes: this.state.likes + 1 })
   }
 

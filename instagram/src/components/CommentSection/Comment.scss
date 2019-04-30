@@ -4,4 +4,11 @@
 
 .jsx-Comment {
   padding: 0 16px;
+
+  &__button {
+    background-color: inherit;
+    border: inherit;
+    outline: none;
+    cursor: pointer;
+  }
 }

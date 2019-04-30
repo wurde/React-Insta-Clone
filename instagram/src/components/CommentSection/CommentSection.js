@@ -40,10 +40,20 @@ class CommentSection extends Component {
     })
   }
 
+  removeComment = event => {
+    event.preventDefault()
+
+    if (window.confirm("Are you sure?")) {
+      let new_comments = [...this.state.comments]
+      new_comments.splice(event.target.dataset.commentIndex, 1)
+      this.setState({ comments: new_comments })
+    }
+  }
+
   render() {
     return (
       <div className="jsx-CommentSection">
-        {this.state.comments.map((comment, index) => <Comment key={index} comment={comment} />)}
+        {this.state.comments.map((comment, index) => <Comment key={index} index={index} comment={comment} removeComment={this.removeComment} />)}
 
         <div className="jsx-CommentSection__timestamp">
           <time>{moment(this.props.postedAt, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</time>
