@@ -1,0 +1,39 @@
+/**
+ * Component styles
+ */
+
+.jsx-Post {
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  text-align: left;
+  margin-bottom: 60px;
+  border-radius: 5px;
+
+  &__header {
+    padding: 16px;
+  }
+
+  &__thumbnail {
+    clip-path: circle(20px at center);
+  }
+
+  &__username {
+    margin-left: 16px;
+  }
+
+  &__actionbar {
+    padding: 0px 16px;
+    margin-top: 8px;
+  }
+
+  &__action {
+    margin-right: 16px;
+  }
+
+  &__likes {
+    padding: 0px 16px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
