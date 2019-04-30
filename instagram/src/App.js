@@ -24,7 +24,8 @@ require('./App.scss')
 
 class App extends Component {
   state = {
-    posts: []
+    posts: [],
+    current_user: 'Andy'
   }
 
   componentDidMount() {
@@ -35,7 +36,7 @@ class App extends Component {
     return (
       <div className="jsx-App">
         <components.SearchBar />
-        <components.PostContainer posts={this.state.posts} />
+        <components.PostContainer posts={this.state.posts} current_user={this.state.current_user} />
       </div>
     )
   }

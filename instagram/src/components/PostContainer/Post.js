@@ -49,7 +49,7 @@ function Post(props) {
 
       <div className="row">
         <div className="col-12">
-          <CommentSection comments={props.post.comments} postedAt={props.post.timestamp} />
+          <CommentSection postIndex={props.postIndex} comments={props.post.comments} postedAt={props.post.timestamp} current_user={props.current_user} />
         </div>
       </div>
     </article>
