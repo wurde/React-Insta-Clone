@@ -20,8 +20,14 @@ function Comment(props) {
   console.log("props", props)
   return (
     <div className="jsx-Comment">
-      <strong>{props.comment.username}</strong> {props.comment.text}<br/>
-      <button className="jsx-Comment__button" onClick={props.removeComment} data-comment-index={props.index}>x</button>
+      <div class="row">
+        <div class="col-10">
+          <strong>{props.comment.username}</strong> {props.comment.text}<br/>
+        </div>
+        <div class="col-2 d-flex justify-content-end">
+          <button className="jsx-Comment__button" onClick={props.removeComment} data-comment-index={props.index}>x</button>
+        </div>
+      </div>
     </div>
   )
 }

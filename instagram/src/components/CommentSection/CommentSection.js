@@ -32,12 +32,15 @@ class CommentSection extends Component {
 
   addNewComment = event => {
     event.preventDefault()
+
     this.setState({
       comments: [...this.state.comments, {
         username: this.state.current_user,
         text: event.target[1].value
       }]
     })
+
+    event.target[1].value = ""
   }
 
   removeComment = event => {

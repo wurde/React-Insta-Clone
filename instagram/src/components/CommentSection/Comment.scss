@@ -10,5 +10,10 @@
     border: inherit;
     outline: none;
     cursor: pointer;
+    color: #DDD;
+  }
+
+  &__button:hover {
+    color: #AAA;
   }
 }
