@@ -31,6 +31,11 @@ class Post extends Component {
     this.setState({ likes: this.state.likes + 1 })
   }
 
+  focusCommentForm = () => {
+    let element = document.querySelector('#postIndex' + this.props.postIndex)
+    if (element) { element.focus() }
+  }
+
   render() {
     return (
       <article className="jsx-Post">
@@ -55,7 +60,7 @@ class Post extends Component {
               <button onClick={this.addNewLike}>
                 <i className="far fa-heart fa-2x jsx-Post__action"></i>
               </button>
-              <button onClick={this.addNewLike}>
+              <button onClick={this.focusCommentForm}>
                 <i className="far fa-comment fa-2x fa-flip-horizontal jsx-Post__action"></i>
               </button>
             </section>
