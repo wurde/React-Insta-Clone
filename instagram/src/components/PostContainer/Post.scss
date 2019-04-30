@@ -26,6 +26,17 @@
     margin-top: 8px;
   }
 
+  &__actionbar button {
+    background-color: inherit;
+    border: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__actionbar button:active {
+    color: red;
+  }
+
   &__action {
     margin-right: 16px;
   }
