@@ -57,7 +57,7 @@ class Post extends Component {
         <div className="row">
           <div className="col-12">
             <section className="jsx-Post__actionbar">
-              <button onClick={this.addNewLike}>
+              <button onClick={this.addNewLike} className="jsx-Post__actionbar--red">
                 <i className="far fa-heart fa-2x jsx-Post__action"></i>
               </button>
               <button onClick={this.focusCommentForm}>
