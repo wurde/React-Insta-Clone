@@ -26,7 +26,6 @@ require('./CommentSection.scss')
 
 class CommentSection extends Component {
   state = {
-    current_user: this.props.current_user,
     comments: this.props.comments
   }
 
@@ -36,7 +35,7 @@ class CommentSection extends Component {
     // TODO look at using callback method to avoid (overwrite *complications).
     this.setState({
       comments: [...this.state.comments, {
-        username: this.state.current_user,
+        username: window.localStorage.getItem('username'),
         text: event.target[1].value
       }]
     })
