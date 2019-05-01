@@ -45,15 +45,14 @@ class App extends Component {
   render() {
     return (
       <div className="jsx-App">
-        <components.LoginPage />
+        <components.AuthenticatedPostsPage
+          filterPosts={this.filterPosts}
+          posts={this.state.posts}
+          current_user={this.state.current_user} />
       </div>
     )
   }
 }
-// <components.AuthenticatedPostsPage
-//   filterPosts={this.filterPosts}
-//   posts={this.state.posts}
-//   current_user={this.state.current_user} />
 
 /**
  * Export component
