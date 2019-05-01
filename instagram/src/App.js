@@ -46,7 +46,7 @@ class App extends Component {
     return (
       <div className="jsx-App">
         <components.SearchBar filterPosts={this.filterPosts} />
-        <components.PostContainer posts={this.state.posts} current_user={this.state.current_user} />
+        <components.AuthenticatedPostContainer posts={this.state.posts} current_user={this.state.current_user} />
       </div>
     )
   }
