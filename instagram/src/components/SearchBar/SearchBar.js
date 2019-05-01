@@ -14,7 +14,7 @@ require('./SearchBar.scss')
  * Define component
  */
 
-function SearchBar() {
+function SearchBar(props) {
   return (
     <header className="jsx-SearchBar">
       <div className="container">
@@ -25,7 +25,10 @@ function SearchBar() {
             <h3>Instagram</h3>
           </div>
           <div className="col-6 d-flex align-items-center justify-content-center">
-            <input type="text" name="q" placeholder="Search" className="jsx-SearchBar__input"></input>
+            <form onSubmit={props.filterPosts}>
+              <input type="text" name="q" placeholder="Search" className="jsx-SearchBar__input"></input>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
           </div>
           <div className="col-3 d-flex align-items-center">
             <i className="far fa-compass fa-2x jsx-SearchBar__explore"></i>

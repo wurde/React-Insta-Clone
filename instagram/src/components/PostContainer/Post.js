@@ -7,6 +7,12 @@ const PropTypes = require('prop-types')
 const CommentSection = require('../CommentSection/CommentSection')
 
 /**
+ * Constants
+ */
+
+const Component = React.Component
+
+/**
  * Import component styles
  */
 
@@ -16,44 +22,63 @@ require('./Post.scss')
  * Define component
  */
 
-function Post(props) {
-  return (
-    <article className="jsx-Post">
-      <header className="jsx-Post__header">
+class Post extends Component {
+  state = {
+    likes: this.props.post.likes
+  }
+
+  addNewLike = () => {
+    this.setState({ likes: this.state.likes + 1 })
+  }
+
+  focusCommentForm = () => {
+    let element = document.querySelector('#postIndex' + this.props.postIndex)
+    if (element) { element.focus() }
+  }
+
+  render() {
+    return (
+      <article className="jsx-Post">
+        <header className="jsx-Post__header">
+          <div className="row">
+            <div className="col-12 d-flex align-items-center">
+              <img src={this.props.post.thumbnailUrl} width="40px" className="jsx-Post__thumbnail" />
+              <span className="jsx-Post__username">{this.props.post.username}</span>
+            </div>
+          </div>
+        </header>
+
         <div className="row">
-          <div className="col-12 d-flex align-items-center">
-            <img src={props.post.thumbnailUrl} width="40px" className="jsx-Post__thumbnail" />
-            <span className="jsx-Post__username">{props.post.username}</span>
+          <div className="col-12">
+            <img src={this.props.post.imageUrl} width="100%" />
           </div>
         </div>
-      </header>
 
-      <div className="row">
-        <div className="col-12">
-          <img src={props.post.imageUrl} width="100%" />
+        <div className="row">
+          <div className="col-12">
+            <section className="jsx-Post__actionbar">
+              <button onClick={this.addNewLike}>
+                <i className="far fa-heart fa-2x jsx-Post__action"></i>
+              </button>
+              <button onClick={this.focusCommentForm}>
+                <i className="far fa-comment fa-2x fa-flip-horizontal jsx-Post__action"></i>
+              </button>
+            </section>
+
+            <section className="jsx-Post__likes">
+              <p>{this.state.likes} likes</p>
+            </section>
+          </div>
         </div>
-      </div>
 
-      <div className="row">
-        <div className="col-12">
-          <section className="jsx-Post__actionbar">
-            <i className="far fa-heart fa-2x jsx-Post__action"></i>
-            <i className="far fa-comment fa-2x fa-flip-horizontal jsx-Post__action"></i>
-          </section>
-
-          <section className="jsx-Post__likes">
-            <p>{props.post.likes} likes</p>
-          </section>
+        <div className="row">
+          <div className="col-12">
+            <CommentSection postIndex={this.props.postIndex} comments={this.props.post.comments} postedAt={this.props.post.timestamp} current_user={this.props.current_user} />
+          </div>
         </div>
-      </div>
-
-      <div className="row">
-        <div className="col-12">
-          <CommentSection comments={props.post.comments} postedAt={props.post.timestamp} />
-        </div>
-      </div>
-    </article>
-  )
+      </article>
+    )
+  }
 }
 
 /**
