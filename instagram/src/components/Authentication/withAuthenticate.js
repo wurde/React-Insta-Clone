@@ -17,7 +17,7 @@ const Component = React.Component
 const withAuthenticate = ProtectedPage =>
   class extends Component {
     render() {
-      return <ProtectedPage />
+      return <ProtectedPage {...this.props} />
     }
   }
 
