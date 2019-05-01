@@ -27,14 +27,18 @@
     text-align: center;
   }
 
-  &__explore { }
+  &__explore {
+    cursor: pointer;
+  }
 
   &__activity {
     margin-left: 15px;
+    cursor: pointer;
   }
 
   &__profile {
     margin-left: 15px;
+    cursor: pointer;
   }
 }
 
