@@ -45,8 +45,10 @@ class App extends Component {
   render() {
     return (
       <div className="jsx-App">
-        <components.SearchBar filterPosts={this.filterPosts} />
-        <components.AuthenticatedPostContainer posts={this.state.posts} current_user={this.state.current_user} />
+        <components.PostsPage
+          filterPosts={this.filterPosts}
+          posts={this.state.posts}
+          current_user={this.state.current_user} />
       </div>
     )
   }
