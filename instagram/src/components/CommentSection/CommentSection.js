@@ -33,6 +33,7 @@ class CommentSection extends Component {
   addNewComment = event => {
     event.preventDefault()
 
+    // TODO look at using callback method to avoid (overwrite *complications).
     this.setState({
       comments: [...this.state.comments, {
         username: this.state.current_user,
