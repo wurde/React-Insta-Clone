@@ -3,21 +3,22 @@
  */
 
 const React = require('react')
+const LoginForm = require('./LoginForm')
 
 /**
  * Import component styles
  */
 
-require('./LoginContainer.scss')
+require('./LoginPage.scss')
 
 /**
  * Define component
  */
 
-function LoginContainer(props) {
+function LoginPage(props) {
   return (
-    <div className="jsx-LoginContainer">
-      jsx-LoginContainer
+    <div className="jsx-LoginPage">
+      <LoginForm />
     </div>
   )
 }
@@ -26,4 +27,4 @@ function LoginContainer(props) {
  * Export component
  */
 
-module.exports = LoginContainer
+module.exports = LoginPage

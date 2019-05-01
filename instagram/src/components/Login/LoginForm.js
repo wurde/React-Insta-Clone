@@ -23,11 +23,35 @@ function LoginForm(props) {
 
   return (
     <div className="jsx-LoginForm">
-      <form onSubmit={handleOnSubmit}>
-        <input type="text" name="username"></input>
-        <input type="password" name="password"></input>
-        <button type="submit">Login</button>
-      </form>
+      <div class="row">
+        <div class="col-12">
+          <h1>Login</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <form onSubmit={handleOnSubmit}>
+            <div class="row">
+              <div class="col-12">
+                <input type="text" name="username" placeholder="username" className="jsx-LoginForm__input"></input>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <input type="password" name="password" placeholder="secret" className="jsx-LoginForm__input"></input>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <button type="submit">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }
