@@ -2,58 +2,6 @@
  * Component styles
  */
 
-.jsx-SearchBar {
-  background-color: #FFF;
-  border-bottom: 1px solid #DDD;
-
-  &__spacer {
-    background-color: #262626;
-    height: 28px;
-    margin: 0 16px;
-    width: 1px;
-  }
-
-  &--padding {
-    padding: 26px 20px;
-  }
-
-  &__input {
-    background-color: #FAFAFA;
-    border-radius: 5px;
-    border: 1px solid #DBDBDB;
-    color: #999;
-    font-weight: 300;
-    padding: 7px;
-    text-align: center;
-  }
-
-  &__explore {
-    cursor: pointer;
-  }
-
-  &__activity {
-    margin-left: 15px;
-    cursor: pointer;
-  }
-
-  &__profile {
-    margin-left: 15px;
-    cursor: pointer;
-  }
-}
-
-.jsx-SearchBar input {
-  border: none;
-  height: 30px;
-  outline: none;
-  border-radius: 3px;
-  padding: 5px 10px;
-}
-
-.jsx-SearchBar input:focus {
-  border: 1px solid #acd4fa;
-}
-
 .jsx-SearchBar button {
   background-color: inherit;
   border: inherit;
