@@ -6,12 +6,6 @@ const React = require('react')
 const LoginForm = require('./LoginForm')
 
 /**
- * Import component styles
- */
-
-require('./LoginPage.scss')
-
-/**
  * Define component
  */
 

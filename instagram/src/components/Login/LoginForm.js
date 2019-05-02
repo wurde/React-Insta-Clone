@@ -3,12 +3,7 @@
  */
 
 const React = require('react')
-
-/**
- * Import component styles
- */
-
-require('./LoginForm.scss')
+const styles = require('./styles/index')
 
 /**
  * Define component
@@ -23,35 +18,43 @@ function LoginForm(props) {
 
   return (
     <div className="jsx-LoginForm">
-      <div className="row">
-        <div className="col-12">
-          <h1>Login</h1>
+      <styles.LoginFormStyle>
+        <div className="row">
+          <div className="col-12">
+            <h1>Login</h1>
+          </div>
         </div>
-      </div>
 
-      <div className="row">
-        <div className="col-12">
-          <form onSubmit={handleOnSubmit}>
-            <div className="row">
-              <div className="col-12">
-                <input type="text" name="username" placeholder="username" className="jsx-LoginForm__input" required></input>
+        <div className="row">
+          <div className="col-12">
+            <form onSubmit={handleOnSubmit}>
+              <div className="row">
+                <div className="col-12">
+                  <styles.LoginFormInputStyle>
+                    <input type="text" name="username" placeholder="username" className="jsx-LoginForm__input" required></input>
+                  </styles.LoginFormInputStyle>
+                </div>
               </div>
-            </div>
 
-            <div className="row">
-              <div className="col-12">
-                <input type="password" name="password" placeholder="secret" className="jsx-LoginForm__input"></input>
+              <div className="row">
+                <div className="col-12">
+                  <styles.LoginFormInputStyle>
+                    <input type="password" name="password" placeholder="secret" className="jsx-LoginForm__input"></input>
+                  </styles.LoginFormInputStyle>
+                </div>
               </div>
-            </div>
 
-            <div className="row">
-              <div className="col-12">
-                <button type="submit">Login</button>
+              <div className="row">
+                <div className="col-12">
+                  <styles.LoginFormButtonStyle>
+                    <button type="submit">Login</button>
+                  </styles.LoginFormButtonStyle>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
+      </styles.LoginFormStyle>
     </div>
   )
 }
