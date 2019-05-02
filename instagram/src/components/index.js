@@ -5,6 +5,5 @@
  */
 
 module.exports = {
-  SearchBar: require('./SearchBar/SearchBar'),
-  PostContainer: require('./PostContainer/PostContainer'),
+  AuthenticatedPostsPage: require('./Authentication/AuthenticatedPostsPage'),
 }

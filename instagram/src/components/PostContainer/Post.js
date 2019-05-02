@@ -5,18 +5,13 @@
 const React = require('react')
 const PropTypes = require('prop-types')
 const CommentSection = require('../CommentSection/CommentSection')
+const styles = require('./styles/index')
 
 /**
  * Constants
  */
 
 const Component = React.Component
-
-/**
- * Import component styles
- */
-
-require('./Post.scss')
 
 /**
  * Define component
@@ -39,43 +34,58 @@ class Post extends Component {
   render() {
     return (
       <article className="jsx-Post">
-        <header className="jsx-Post__header">
+        <styles.PostStyle>
+          <header>
+            <styles.PostHeaderStyle>
+              <div className="row">
+                <div className="col-12 d-flex align-items-center">
+                  <styles.PostThumbnailStyle>
+                    <img src={this.props.post.thumbnailUrl} width="40px" />
+                  </styles.PostThumbnailStyle>
+                  <styles.PostUsernameStyle>
+                    <span>{this.props.post.username}</span>
+                  </styles.PostUsernameStyle>
+                </div>
+              </div>
+            </styles.PostHeaderStyle>
+          </header>
+
           <div className="row">
-            <div className="col-12 d-flex align-items-center">
-              <img src={this.props.post.thumbnailUrl} width="40px" className="jsx-Post__thumbnail" />
-              <span className="jsx-Post__username">{this.props.post.username}</span>
+            <div className="col-12">
+              <img src={this.props.post.imageUrl} width="100%" />
             </div>
           </div>
-        </header>
 
-        <div className="row">
-          <div className="col-12">
-            <img src={this.props.post.imageUrl} width="100%" />
+          <div className="row">
+            <div className="col-12">
+              <section>
+                <styles.PostActionbarStyle>
+                  <styles.PostActionbarButtonStyle onClick={this.addNewLike}>
+                    <i className="far fa-heart fa-2x"></i>
+                  </styles.PostActionbarButtonStyle>
+
+                  <styles.PostActionbarButtonStyle onClick={this.focusCommentForm}>
+                    <styles.PostActionStyle>
+                      <i className="far fa-comment fa-2x fa-flip-horizontal"></i>
+                    </styles.PostActionStyle>
+                  </styles.PostActionbarButtonStyle>
+                </styles.PostActionbarStyle>
+              </section>
+
+              <section>
+                <styles.PostLikesStyle>
+                  <p>{this.state.likes} likes</p>
+                </styles.PostLikesStyle>
+              </section>
+            </div>
           </div>
-        </div>
 
-        <div className="row">
-          <div className="col-12">
-            <section className="jsx-Post__actionbar">
-              <button onClick={this.addNewLike}>
-                <i className="far fa-heart fa-2x jsx-Post__action"></i>
-              </button>
-              <button onClick={this.focusCommentForm}>
-                <i className="far fa-comment fa-2x fa-flip-horizontal jsx-Post__action"></i>
-              </button>
-            </section>
-
-            <section className="jsx-Post__likes">
-              <p>{this.state.likes} likes</p>
-            </section>
+          <div className="row">
+            <div className="col-12">
+              <CommentSection postIndex={this.props.postIndex} comments={this.props.post.comments} postedAt={this.props.post.timestamp} current_user={this.props.current_user} />
+            </div>
           </div>
-        </div>
-
-        <div className="row">
-          <div className="col-12">
-            <CommentSection postIndex={this.props.postIndex} comments={this.props.post.comments} postedAt={this.props.post.timestamp} current_user={this.props.current_user} />
-          </div>
-        </div>
+        </styles.PostStyle>
       </article>
     )
   }
