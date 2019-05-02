@@ -29,12 +29,14 @@ function SearchBar(props) {
             <div className="jsx-SearchBar__spacer"></div>
             <h3>Instagram</h3>
           </div>
+
           <div className="col-6 d-flex align-items-center justify-content-center">
             <form onSubmit={props.filterPosts}>
               <input type="text" name="q" placeholder="Search" className="jsx-SearchBar__input"></input>
               <button type="submit"><i className="fa fa-search"></i></button>
             </form>
           </div>
+
           <div className="col-3 d-flex align-items-center">
             <i className="far fa-compass fa-2x jsx-SearchBar__explore"></i>
             <i className="far fa-heart fa-2x jsx-SearchBar__activity"></i>
