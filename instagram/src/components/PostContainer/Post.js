@@ -35,15 +35,15 @@ class Post extends Component {
     return (
       <article className="jsx-Post">
         <styles.PostStyle>
-          <header className="jsx-Post__header">
+          <header>
             <styles.PostHeaderStyle>
               <div className="row">
                 <div className="col-12 d-flex align-items-center">
                   <styles.PostThumbnailStyle>
-                    <img src={this.props.post.thumbnailUrl} width="40px" className="jsx-Post__thumbnail" />
+                    <img src={this.props.post.thumbnailUrl} width="40px" />
                   </styles.PostThumbnailStyle>
                   <styles.PostUsernameStyle>
-                    <span className="jsx-Post__username">{this.props.post.username}</span>
+                    <span>{this.props.post.username}</span>
                   </styles.PostUsernameStyle>
                 </div>
               </div>
@@ -58,21 +58,21 @@ class Post extends Component {
 
           <div className="row">
             <div className="col-12">
-              <section className="jsx-Post__actionbar">
+              <section>
                 <styles.PostActionbarStyle>
-                  <styles.PostActionbarButtonStyle onClick={this.addNewLike} className="jsx-Post__actionbar--red">
-                    <i className="far fa-heart fa-2x jsx-Post__action"></i>
+                  <styles.PostActionbarButtonStyle onClick={this.addNewLike}>
+                    <i className="far fa-heart fa-2x"></i>
                   </styles.PostActionbarButtonStyle>
 
                   <styles.PostActionbarButtonStyle onClick={this.focusCommentForm}>
                     <styles.PostActionStyle>
-                      <i className="far fa-comment fa-2x fa-flip-horizontal jsx-Post__action"></i>
+                      <i className="far fa-comment fa-2x fa-flip-horizontal"></i>
                     </styles.PostActionStyle>
                   </styles.PostActionbarButtonStyle>
                 </styles.PostActionbarStyle>
               </section>
 
-              <section className="jsx-Post__likes">
+              <section>
                 <styles.PostLikesStyle>
                   <p>{this.state.likes} likes</p>
                 </styles.PostLikesStyle>
