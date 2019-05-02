@@ -7,12 +7,6 @@ const SearchBar = require('../SearchBar/SearchBar')
 const PostContainer = require('./PostContainer')
 
 /**
- * Import component styles
- */
-
-require('./PostsPage.scss')
-
-/**
  * Define component
  */
 
