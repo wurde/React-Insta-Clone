@@ -33,7 +33,7 @@ class Post extends Component {
 
   render() {
     return (
-      <article className="jsx-Post">
+      <article className="jsx-Post" onClick={() => this.props.focusPost(this.props.post.id) }>
         <styles.PostStyle>
           <header>
             <styles.PostHeaderStyle>

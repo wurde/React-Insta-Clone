@@ -22,6 +22,7 @@ let PostStyle = styled.div(() => `
   text-align: left;
   margin-bottom: 60px;
   border-radius: 5px;
+  cursor:pointer;
 `)
 
 /**

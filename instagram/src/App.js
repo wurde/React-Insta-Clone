@@ -41,11 +41,19 @@ class App extends Component {
     })
   }
 
+  focusPost = (post_id) => {
+    console.log(`focusPost ${post_id}`)
+    this.setState({
+      posts: this.state.posts.filter(post => post.id === post_id)
+    })
+  }
+
   render() {
     return (
       <div className="jsx-App">
         <components.AuthenticatedPostsPage
           filterPosts={this.filterPosts}
+          focusPost={this.focusPost}
           posts={this.state.posts} />
       </div>
     )
