@@ -5,12 +5,25 @@
 const React = require('react')
 const PropTypes = require('prop-types')
 const Post = require('./Post')
+const styled_components = require('styled-components')
 
 /**
- * Import component styles
+ * Constants
  */
 
-require('./PostContainer.scss')
+const styled = styled_components.default
+
+/**
+ * Define style components
+ */
+
+let PostContainerStyle = styled.div(() => `
+  background-color: #FAFAFA;
+`)
+
+let PostContainerSectionStyle = styled.section(() => `
+  padding-top: 60px;
+`)
 
 /**
  * Define component
@@ -19,15 +32,17 @@ require('./PostContainer.scss')
 function PostContainer(props) {
   return (
     <div className="jsx-PostContainer">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-8">
-            <section className="jsx-PostContainer__section">
-              {props.posts.map((post, index) => <Post key={post.id} post={post} postIndex={index} current_user={props.current_user} /> )}
-            </section>
+      <PostContainerStyle>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-8">
+              <PostContainerSectionStyle>
+                {props.posts.map((post, index) => <Post key={post.id} post={post} postIndex={index} current_user={props.current_user} /> )}
+              </PostContainerSectionStyle>
+            </div>
           </div>
         </div>
-      </div>
+      </PostContainerStyle>
     </div>
   )
 }
