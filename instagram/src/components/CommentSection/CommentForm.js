@@ -3,12 +3,7 @@
  */
 
 const React = require('react')
-
-/**
- * Import component styles
- */
-
-require('./CommentForm.scss')
+const styles = require('./styles/index')
 
 /**
  * Define component
@@ -17,11 +12,13 @@ require('./CommentForm.scss')
 function CommentForm(props) {
   return (
     <section className="jsx-CommentForm">
-      <form className="d-flex justify-content-between" onSubmit={props.addNewComment}>
-        <input type="hidden" name="post_index" value={props.postIndex}></input>
-        <input id={'postIndex' + props.postIndex} type="text" name="comment" placeholder="Add a comment..."></input>
-        <button type="submit">Post</button>
-      </form>
+      <styles.CommentFormStyle>
+        <form className="d-flex justify-content-between" onSubmit={props.addNewComment}>
+          <input type="hidden" name="post_index" value={props.postIndex}></input>
+          <input id={'postIndex' + props.postIndex} type="text" name="comment" placeholder="Add a comment..."></input>
+          <button type="submit">Post</button>
+        </form>
+      </styles.CommentFormStyle>
     </section>
   )
 }

@@ -16,15 +16,16 @@ const styled = styled_components.default
  * Define style component
  */
 
-let PostActionbarButtonStyle = styled.div(() => `
+let CommentButtonStyle = styled.div(() => `
   button {
     background-color: inherit;
     border: inherit;
-    cursor: pointer;
     outline: none;
+    cursor: pointer;
+    color: #DDD;
 
-    &:active {
-      color: red;
+    &:hover {
+      color: #AAA;
     }
   }
 `)
@@ -33,4 +34,4 @@ let PostActionbarButtonStyle = styled.div(() => `
  * Export style component
  */
 
-module.exports = PostActionbarButtonStyle
+module.exports = CommentButtonStyle

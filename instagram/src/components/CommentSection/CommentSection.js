@@ -7,18 +7,13 @@ const moment = require('moment')
 const PropTypes = require('prop-types')
 const Comment = require('./Comment')
 const CommentForm = require('./CommentForm')
+const styles = require('./styles/index')
 
 /**
  * Constants
  */
 
 const Component = React.Component
-
-/**
- * Import component styles
- */
-
-require('./CommentSection.scss')
 
 /**
  * Define component
@@ -58,9 +53,9 @@ class CommentSection extends Component {
       <div className="jsx-CommentSection">
         {this.state.comments.map((comment, index) => <Comment key={index} index={index} comment={comment} removeComment={this.removeComment} />)}
 
-        <div className="jsx-CommentSection__timestamp">
+        <styles.CommentSectionTimestampStyle>
           <time>{moment(this.props.postedAt, 'MMMM Do YYYY, hh:mm:ss a').fromNow()}</time>
-        </div>
+        </styles.CommentSectionTimestampStyle>
 
         <CommentForm postIndex={this.props.postIndex} addNewComment={this.addNewComment} />
       </div>

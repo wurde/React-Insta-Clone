@@ -5,12 +5,7 @@
 const React = require('react')
 const PropTypes = require('prop-types')
 const CommentForm = require('./CommentForm')
-
-/**
- * Import component styles
- */
-
-require('./Comment.scss')
+const styles = require('./styles/index')
 
 /**
  * Define component
@@ -19,14 +14,19 @@ require('./Comment.scss')
 function Comment(props) {
   return (
     <div className="jsx-Comment">
-      <div className="row">
-        <div className="col-10">
-          <strong>{props.comment.username}</strong> {props.comment.text}<br/>
+      <styles.CommentStyle>
+        <div className="row">
+          <div className="col-10">
+            <strong>{props.comment.username}</strong> {props.comment.text}<br/>
+          </div>
+
+          <div className="col-2 d-flex justify-content-end">
+            <styles.CommentButtonStyle>
+              <button onClick={props.removeComment} data-comment-index={props.index}>x</button>
+            </styles.CommentButtonStyle>
+          </div>
         </div>
-        <div className="col-2 d-flex justify-content-end">
-          <button className="jsx-Comment__button" onClick={props.removeComment} data-comment-index={props.index}>x</button>
-        </div>
-      </div>
+      </styles.CommentStyle>
     </div>
   )
 }
