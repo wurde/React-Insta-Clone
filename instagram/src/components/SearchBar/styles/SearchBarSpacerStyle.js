@@ -16,17 +16,15 @@ const styled = styled_components.default
  * Define style component
  */
 
-let PostStyle = styled.div(() => `
-  background-color: #FFF;
-  border: 1px solid #DDD;
-  text-align: left;
-  margin-bottom: 60px;
-  border-radius: 5px;
-  cursor:pointer;
+let SearchBarSpacerStyle = styled.div(() => `
+  background-color: #262626;
+  height: 28px;
+  margin: 0 16px;
+  width: 1px;
 `)
 
 /**
  * Export style component
  */
 
-module.exports = PostStyle
+module.exports = SearchBarSpacerStyle

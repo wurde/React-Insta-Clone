@@ -1,8 +1,22 @@
+'use strict'
+
 /**
- * Component styles
+ * Dependencies
  */
 
-.jsx-CommentForm {
+const styled_components = require('styled-components')
+
+/**
+ * Constants
+ */
+
+const styled = styled_components.default
+
+/**
+ * Define style component
+ */
+
+let CommentFormStyle = styled.div(() => `
   border-top: 1px solid #DDD;
   margin-top: 4px;
   padding: 20px 16px;
@@ -28,4 +42,10 @@
     opacity: 0.4;
     cursor: pointer;
   }
-}
+`)
+
+/**
+ * Export style component
+ */
+
+module.exports = CommentFormStyle

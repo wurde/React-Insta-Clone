@@ -33,7 +33,7 @@ class Post extends Component {
 
   render() {
     return (
-      <article className="jsx-Post">
+      <article className="jsx-Post" onClick={() => this.props.focusPost(this.props.post.id) }>
         <styles.PostStyle>
           <header>
             <styles.PostHeaderStyle>
@@ -60,14 +60,18 @@ class Post extends Component {
             <div className="col-12">
               <section>
                 <styles.PostActionbarStyle>
-                  <styles.PostActionbarButtonStyle onClick={this.addNewLike}>
-                    <i className="far fa-heart fa-2x"></i>
+                  <styles.PostActionbarButtonStyle>
+                    <button onClick={this.addNewLike}>
+                      <i className="far fa-heart fa-2x"></i>
+                    </button>
                   </styles.PostActionbarButtonStyle>
 
-                  <styles.PostActionbarButtonStyle onClick={this.focusCommentForm}>
-                    <styles.PostActionStyle>
-                      <i className="far fa-comment fa-2x fa-flip-horizontal"></i>
-                    </styles.PostActionStyle>
+                  <styles.PostActionbarButtonStyle>
+                    <button onClick={this.focusCommentForm}>
+                      <styles.PostActionStyle>
+                        <i className="far fa-comment fa-2x fa-flip-horizontal"></i>
+                      </styles.PostActionStyle>
+                    </button>
                   </styles.PostActionbarButtonStyle>
                 </styles.PostActionbarStyle>
               </section>

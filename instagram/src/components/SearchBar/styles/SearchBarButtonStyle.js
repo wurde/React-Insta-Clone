@@ -16,17 +16,18 @@ const styled = styled_components.default
  * Define style component
  */
 
-let PostStyle = styled.div(() => `
-  background-color: #FFF;
-  border: 1px solid #DDD;
-  text-align: left;
-  margin-bottom: 60px;
-  border-radius: 5px;
-  cursor:pointer;
+let SearchBarButtonStyle = styled.div(() => `
+  button {
+    background-color: inherit;
+    border: inherit;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+  }
 `)
 
 /**
  * Export style component
  */
 
-module.exports = PostStyle
+module.exports = SearchBarButtonStyle

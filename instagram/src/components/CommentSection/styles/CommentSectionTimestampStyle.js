@@ -16,17 +16,16 @@ const styled = styled_components.default
  * Define style component
  */
 
-let PostStyle = styled.div(() => `
-  background-color: #FFF;
-  border: 1px solid #DDD;
-  text-align: left;
-  margin-bottom: 60px;
-  border-radius: 5px;
-  cursor:pointer;
+let CommentSectionTimestampStyle = styled.div(() => `
+  padding: 0px 16px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #999;
+  text-transform: uppercase;
 `)
 
 /**
  * Export style component
  */
 
-module.exports = PostStyle
+module.exports = CommentSectionTimestampStyle

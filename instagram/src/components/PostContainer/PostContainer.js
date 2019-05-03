@@ -37,7 +37,7 @@ function PostContainer(props) {
           <div className="row justify-content-center">
             <div className="col-8">
               <PostContainerSectionStyle>
-                {props.posts.map((post, index) => <Post key={post.id} post={post} postIndex={index} current_user={props.current_user} /> )}
+                {props.posts.map((post, index) => <Post key={post.id} post={post} postIndex={index} current_user={props.current_user} focusPost={props.focusPost} /> )}
               </PostContainerSectionStyle>
             </div>
           </div>
